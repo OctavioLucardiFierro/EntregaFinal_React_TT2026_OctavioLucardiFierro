@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Paleta de la marca PS Store */
+  --ps-bg: #0b0b14;
+  --ps-bg-nav: #0d0d18;
+  --ps-card: #13131e;
+  --ps-border: #1e1e30;
+  --ps-text: #e8e8f0;
+  --ps-text-muted: #8080a0;
+  --ps-accent: #3390ff;
+  --ps-primary: #0070cc;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--ps-bg);
+  color: var(--ps-text);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ajustes para que React-Bootstrap (modo dark) combine con la marca */
+[data-bs-theme="dark"] {
+  --bs-body-bg: #0b0b14;
+  --bs-body-color: #e8e8f0;
+  --bs-primary: #0070cc;
+  --bs-border-color: #1e1e30;
+  --bs-secondary-bg: #13131e;
+}
+
+[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .modal-content,
+[data-bs-theme="dark"] .dropdown-menu {
+  background-color: var(--ps-card);
+  border-color: var(--ps-border);
+}
+
+a {
+  color: var(--ps-accent);
+}
